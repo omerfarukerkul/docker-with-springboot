@@ -16,7 +16,7 @@ inspect -f '{{ .NetworkSettings.Gateway }}'
  ```
 ### Application.properties.template
 ```
-spring.datasource.url=jdbc:postgresql://localhost:5432/products_db
+spring.datasource.url=jdbc:postgresql://[network-address]:5432/products_db
 spring.datasource.username=dbuser
 spring.datasource.password=password
 spring.jpa.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
