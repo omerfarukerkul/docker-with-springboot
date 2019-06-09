@@ -1,7 +1,7 @@
-package com.anirudhbhatnagar.productService;
+package com.omerfaruk.productService;
 
-import com.anirudhbhatnagar.productService.model.Product;
-import com.anirudhbhatnagar.productService.model.ProductRepository;
+import com.omerfaruk.productService.model.Product;
+import com.omerfaruk.productService.model.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

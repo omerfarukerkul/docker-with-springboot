@@ -1,7 +1,7 @@
-package com.anirudhbhatnagar.productService.controller;
+package com.omerfaruk.productService.controller;
 
-import com.anirudhbhatnagar.productService.ProductService;
-import com.anirudhbhatnagar.productService.model.Product;
+import com.omerfaruk.productService.ProductService;
+import com.omerfaruk.productService.model.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.anirudhbhatnagar.productService.model;
+package com.omerfaruk.productService.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
