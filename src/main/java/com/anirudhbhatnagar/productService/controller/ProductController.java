@@ -1,7 +1,9 @@
 package com.anirudhbhatnagar.productService.controller;
 
+import com.anirudhbhatnagar.productService.ProductService;
 import com.anirudhbhatnagar.productService.model.Product;
-import com.anirudhbhatnagar.productService.model.ProductRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,21 +14,26 @@ import java.util.List;
 
 @RestController
 public class ProductController {
+    private final Logger LOGGER = LoggerFactory.getLogger(ProductController.class);
 
-    private final ProductRepository productRepository;
+    private final ProductService productService;
 
     @Autowired
-    public ProductController(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @GetMapping("/products")
     public List<Product> getProducts() {
-        return productRepository.findAll();
+        final long first = System.currentTimeMillis();
+        List<Product> products = productService.findAll();
+        final long last = System.currentTimeMillis();
+        LOGGER.info((last - first)+"");
+        return products;
     }
 
     @PostMapping("/products")
     public Product saveProduct(@RequestBody Product product) {
-        return productRepository.save(product);
+        return productService.save(product);
     }
 }

@@ -16,7 +16,6 @@ HELP.md
 *.iws
 *.iml
 *.ipr
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -27,3 +26,8 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
+### GitHub ###
+.git/
+*.git
+.git
